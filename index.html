@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="center">Calculo aleatório</h1>
+
+
+    <p class="center">Vm=<span id="var_Sf"></span>-
+        <span id="var_Si"></span>/
+        <span id="var_Tf"></span>-
+        <span id="var_Ti"></span>
+    </p>
+
+    <p class="center">Resultado=<span id="resultado"></span>
+
+
+    </p>
+
+    <div class="form">
+        <div>Sf=<input type="text" name="numero" id="text_Sf"> </div>
+        <div>Si=<input type="text" name="numero" id="text_Si"> </div>
+        <div>Tf=<input type="text" name="numero" id="text_Tf"> </div>
+        <div>Ti=<input type="text" name="numero" id="text_Ti"> </div>
+
+
+
+
+
+
+    </div>
+    <div class="center">
+        <button onclick="derem()">
+            <a onmouseover="derem2('lampada', 'imagens/on.jpg')" onmouseout="derem2('lampada', 'imagens/of.png')">
+                <img src="imagens/of.png" alt="" id="lampada" width="40rem">
+            </a>
+        </button>
+    </div>
+    <script>
+        function derem2(objeto, imagem) {
+
+
+            lampada.src = imagem;
+        }
+
+
+
+
+
+        function derem() {
+
+            alert("mourvan adotado sem pai");
+            var valor_Sf = document.getElementById("text_Sf").value;
+            var valor_Si = document.getElementById("text_Si").value;
+            var valor_Tf = document.getElementById("text_Tf").value;
+            var valor_Ti = document.getElementById("text_Ti").value;
+
+
+
+
+            var Sf = valor_Sf;
+            var Si = valor_Si;
+            var Tf = valor_Tf;
+            var Ti = valor_Ti;
+            var S = Sf - Si;
+            var T = Tf - Ti;
+            var Vm = S / T;
+
+
+
+
+
+            document.getElementById("var_Sf").textContent = Sf;
+            document.getElementById("var_Si").textContent = Si;
+            document.getElementById("var_Tf").textContent = Tf;
+            document.getElementById("var_Ti").textContent = Ti;
+            document.getElementById("resultado").textContent = Vm;
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
